@@ -13,9 +13,9 @@ export class HomeComponent implements OnInit {
   public cliente:Cliente = {} as Cliente
 
   public clientes:Cliente[] = [
-    { id: 1, nome: "Leandro", telefone: 11999999999, endereco: "Rua teste 123", data: new Date(), valor: 33.45, cpf: "33333333333"},
-    { id: 2, nome: "Marcia", telefone: 11993999999, endereco: "Rua av 123", data: new Date(), valor: 4533, cpf: "33333333233"},
-    { id: 3, nome: "Livinia", telefone: 11999599999, endereco: "Rua florida 123", data: new Date(), valor: 1269.03, cpf: "33333333331"}
+    { id: 1, nome: "Leonardo", telefone: 11944448888, endereco: "Rua teste 321", data: new Date(), valor: 22.76, cpf: 55544433321},
+    { id: 2, nome: "Asdrubal", telefone: 11943348888, endereco: "Rua av 123", data: new Date(), valor: 4700, cpf: 88877711123},
+    { id: 3, nome: "Catalista", telefone: 11912428888, endereco: "Rua florida 456", data: new Date(), valor: 2387.90, cpf: 95135748621}
   ]
 
   ngOnInit(): void {
@@ -27,11 +27,11 @@ export class HomeComponent implements OnInit {
     let novoCliente: Cliente = {
       id: id,
       nome: this.cliente.nome,
-      telefone: 11999999999,
+      telefone: this.cliente.telefone,
       endereco: this.cliente.endereco,
       data: new Date(),
-      valor: 33.45,
-      cpf: "33333333333"
+      valor: this.cliente.valor,
+      cpf: this.cliente.cpf
     } as Cliente
 
     this.clientes.push(novoCliente)

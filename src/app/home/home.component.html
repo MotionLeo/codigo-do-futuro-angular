@@ -139,8 +139,20 @@
                     </div>
                     <!-- Email address input-->
                     <div class="form-floating mb-3">
+                        <input class="form-control" id="cpf" name="cpf" type="text" [(ngModel)]="cliente.cpf" placeholder="Digite seu CPF">
+                        <label for="email">CPF</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="telefone" name="telefone" type="text" [(ngModel)]="cliente.telefone" placeholder="Digite seu telefone">
+                        <label for="email">Telefone</label>
+                    </div>
+                    <div class="form-floating mb-3">
                         <input class="form-control" id="endereco" name="endereco" type="text" [(ngModel)]="cliente.endereco" placeholder="Digite seu endereço">
                         <label for="email">Endereço</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="valor" name="valor" type="text" [(ngModel)]="cliente.valor" placeholder="Digite quanto de valor">
+                        <label for="email">Valor</label>
                     </div>
 
                     <button class="btn btn-primary btn-xl" id="submitButton" type="button" (click)="clicou()">Enviar</button>
@@ -171,7 +183,7 @@
           <tr *ngFor="let cliente of clientes">
             <th scope="row">{{cliente.id}}</th>
             <td>{{cliente.nome}}</td>
-            <td>{{cliente.cpf}}</td>
+            <td>{{cliente.cpf | formatarCpf}}</td>
             <td>{{cliente.telefone | formatarTelefone}}</td>
             <td>{{cliente.endereco}}</td>
             <td>{{cliente.data | date: 'dd/MM/yyyy'}}</td>

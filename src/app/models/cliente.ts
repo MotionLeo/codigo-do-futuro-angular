@@ -5,5 +5,5 @@ export interface Cliente {
     endereco: String
     data: Date
     valor: Number
-    cpf: String
+    cpf: number
 }
