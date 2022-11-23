@@ -21,6 +21,7 @@ import { FormClienteCarrinhoComponent } from './paginas/form-cliente-carrinho/fo
 import { ListaClientesComponent } from './paginas/lista-clientes/lista-clientes.component';
 import { FormProdutosCarrinhoComponent } from './paginas/form-produtos-carrinho/form-produtos-carrinho.component';
 import { ListaProdutosComponent } from './paginas/lista-produtos/lista-produtos.component';
+import { ListaCarrinhoComponent } from './paginas/lista-carrinho/lista-carrinho.component';
 
 registerLocaleData(ptBr);
 
@@ -40,7 +41,8 @@ registerLocaleData(ptBr);
     FormClienteCarrinhoComponent,
     ListaClientesComponent,
     FormProdutosCarrinhoComponent,
-    ListaProdutosComponent
+    ListaProdutosComponent,
+    ListaCarrinhoComponent
   ],
   imports: [
     BrowserModule,

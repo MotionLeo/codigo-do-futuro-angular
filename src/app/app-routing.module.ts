@@ -5,6 +5,7 @@ import { FormClienteCarrinhoComponent } from './paginas/form-cliente-carrinho/fo
 import { FormProdutosCarrinhoComponent } from './paginas/form-produtos-carrinho/form-produtos-carrinho.component';
 import { FormComponent } from './paginas/form/form.component';
 import { HomeComponent } from './paginas/home/home.component';
+import { ListaCarrinhoComponent } from './paginas/lista-carrinho/lista-carrinho.component';
 import { ListaClientesComponent } from './paginas/lista-clientes/lista-clientes.component';
 import { ListaProdutosComponent } from './paginas/lista-produtos/lista-produtos.component';
 import { NaoEncontradaComponent } from './paginas/nao-encontrada/nao-encontrada.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'produto-carrinho', component: FormProdutosCarrinhoComponent },
   { path: 'produto-carrinho/:id', component: FormProdutosCarrinhoComponent },
   { path: 'consulta-produto-carrinho', component: ListaProdutosComponent },
+  { path: 'consulta-carrinho', component: ListaCarrinhoComponent },
   { path: '**', component: NaoEncontradaComponent },
 ];
 

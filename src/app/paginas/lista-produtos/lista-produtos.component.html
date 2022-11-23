@@ -35,7 +35,7 @@
                       <td>{{produto.nomeProduto}}</td>
                       <td>{{produto.descricaoProduto}}</td>
                       <td>{{produto.precoProduto}}</td>
-                      <td><a class="btn btn-warning" routerLink="/produto-carrinho/{{produto.id}}">Alterar</a></td>
+                      <td><button class="btn btn-primary" (click)="adicionarNoCarrinho(produto)">Adicionar no carrinho</button></td>
                       <td><button class="btn btn-danger" (click)="excluirProduto(produto)">Excluir</button></td>
                     </tr>
                   </tbody>

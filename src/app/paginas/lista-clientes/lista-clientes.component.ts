@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ClienteCarrinho } from 'src/app/models/clienteCarrinho';
 import { ClienteCarrinhoServico } from 'src/app/servicos/clienteCarrinhoServico';
 import { ClienteObserverServicoService } from 'src/app/servicos/clienteObserverServico.service';
+import { CarrinhoServico } from 'src/app/servicos/carrinhoDeProdutos';
 
 @Component({
   selector: 'app-lista-clientes',
@@ -30,5 +31,7 @@ export class ListaClientesComponent implements OnInit {
     this.clientes = ClienteCarrinhoServico.getClientes();
     this.clienteObserverServicoService.atualizaQuantidade();
   }
-
+  clienteNoCarrinho(){
+    CarrinhoServico.get().idCliente = 1
+  }
 }
