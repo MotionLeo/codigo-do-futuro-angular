@@ -10,7 +10,33 @@
         </div>
   
         <!-- Contact Section Form-->
-       
+        <!-- <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-7">
+              <div *ngIf="carrinho.length == 0" class="alert alert-primary" role="alert">
+                  Não tem nada no carrinho ainda
+              </div>
+              <table *ngIf="carrinho.length > 0" class="table">
+                  <thead>
+                    <tr>
+                        <th scope="col">ID da compra</th>
+                        <th scope="col">ID do cliente</th>
+                        <th scope="col">Item</th>
+                        <th scope="col">Preço</th>
+                        <th scope="col" colspan="1">Ações</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                        <tr *ngFor="let item of carrinho">
+                        <th scope="row">{{item.id}}</th>
+                        <td>{{item.idCliente}}</td>
+                        <td>{{item.itens}}</td>
+                        <td>{{item.dataDoPedido}}</td>
+                        <td><button class="btn btn-danger" (click)="excluirItem(item)">Remover do carrinho</button></td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
+        </div> -->
     </div>
   </section>
 

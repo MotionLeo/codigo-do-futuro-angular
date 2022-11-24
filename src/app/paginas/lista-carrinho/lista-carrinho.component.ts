@@ -9,7 +9,7 @@ import { CarrinhoServico } from 'src/app/servicos/carrinhoDeProdutos';
 })
 export class ListaCarrinhoComponent implements OnInit {
 
-  public carrinho : CarrinhoDeProdutos[] = CarrinhoServico.get();
+  //public carrinho : CarrinhoDeProdutos = CarrinhoServico.get();
 
   constructor() { }
 

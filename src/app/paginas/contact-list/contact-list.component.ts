@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Cliente } from 'src/app/models/cliente';
 import { ClienteObserverServicoService } from 'src/app/servicos/clienteObserverServico.service';
@@ -13,13 +14,19 @@ export class ContactListComponent implements OnInit {
 
   constructor(
     private router:Router,
+    private http:HttpClient,
     private clienteObserverServicoService: ClienteObserverServicoService
   ) { }
 
   ngOnInit(): void {
+    this.listaClientes()
   }
   
-  public clientes:Cliente[] = ClienteServico.buscaClientes()
+  public clientes:Cliente[] | undefined = []
+
+  private async listaClientes(){
+    this.clientes = await new ClienteServico(this.http).lista();
+  }
 
   novo(){
     this.router.navigateByUrl("/form")
